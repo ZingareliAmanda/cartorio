@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html layout:decorate="~{base}">
+<meta charset="utf-8">
+<head>
+<title>Cartório | Lista</title>
+</head>
+<body>
+	<div class="content m-3" layout:fragment="content">
+		<h4>Pesquisar cartórios</h4>
+		<hr>
+		<table class="table table-striped col-lg-8 table-bordered">
+			<thead>
+				<tr class="table-info">
+					<th scope="col">id</th>
+					<th scope="col">nome</th>
+					<th scope="col">editar</th>
+					<th scope="col">excluir</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="cartorio : ${cartorios}">
+					<td scope="row">
+						<p th:text="${cartorio.id}"></p>
+					</td>
+					<td>
+						<p th:text="${cartorio.nome}"></p>
+					</td>
+					<td click="alert('editei')">
+						<i class="text-info fas fa-edit"></i>
+					</td>
+					<td click="alert('apaguei')">
+						<i class="text-info fas fa-trash"></i>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
