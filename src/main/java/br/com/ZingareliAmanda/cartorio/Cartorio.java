@@ -16,6 +16,6 @@ public class Cartorio {
 	
 	@Id
 	@GeneratedValue
-	private long id;
+	private Long id;
 	
 }

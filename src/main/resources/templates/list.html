@@ -20,15 +20,15 @@
 			<tbody>
 				<tr th:each="cartorio : ${cartorios}">
 					<td scope="row">
-						<p th:text="${cartorio.id}"></p>
+						<p class="id" th:text="${cartorio.id}"></p>
 					</td>
 					<td>
-						<p th:text="${cartorio.nome}"></p>
+						<p class="nome" th:text="${cartorio.nome}"></p>
 					</td>
-					<td click="alert('editei')">
+					<td onclick="editar(this)">
 						<i class="text-info fas fa-edit"></i>
 					</td>
-					<td click="alert('apaguei')">
+					<td onclick="apagar(this)">
 						<i class="text-info fas fa-trash"></i>
 					</td>
 				</tr>

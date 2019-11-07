@@ -21,7 +21,7 @@ public class CartorioService {
 	}
 
 	public List<Cartorio> getTodos() {
-		return this.dao.findAll();
+		return this.dao.findAllOrderByIdAscss();
 	}
 
 	public Optional<Cartorio> getPorId(Long id) {
